@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class AB {
+    public static void main(String args[]) {
+        Scanner ob=new Scanner(System.in);
+        System.out.println("------Welcome to simple calculator------");
+        System.out.println("Enter any number : ");
+        double num=ob.nextDouble();
+        System.out.print("Enter any number : ");
+        double num2=ob.nextDouble();
+        System.out.println("Which operation do you want ?");
+        System.out.println("1.Addition ");
+        System.out.println("2.Subtraction ");
+        System.out.println("3.Multiplication ");
+        System.out.println("4.Division ");
+        System.out.println("Enter the desired operation number --> ");
+        int opt=ob.nextInt();
+        if(opt==1) {
+            double res=num+num2;
+            System.out.println("Addition is : "+res);
+        } else if(opt==2) {
+            double res1=num-num2;
+            System.out.println("Subtraction is : "+res1);
+        }
+
+        else if(opt==3) {
+            double res2=num*num2;
+            System.out.println("Multiplication is : "+res2);
+        }
+
+        else if(opt==4) {
+            double res3=(num/num2);
+            System.out.println("Division is : "+res3);
+        } else {
+            System.out.println("Invaild option");
+        }
+        System.out.println("--------------------Thank you for using calculator--------------------");
+
+    }
+}
