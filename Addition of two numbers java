@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class AB{
+public static void main(String args[])
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter any number : ");
+int num=ob.nextInt();
+System.out.println("Enter any number : ");
+int num2=ob.nextInt();
+int res=num+num2;
+System.out.println("Addition of two numbers is  : "+res);
+}}
