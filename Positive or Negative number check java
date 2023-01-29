@@ -1,0 +1,18 @@
+import java.util.Scanner;
+class Aboubakar
+{ 
+ public static void main(String args[])
+{
+Scanner ob=new Scanner(System.in);
+System.out.println("Enter the number");
+int a=ob.nextInt();
+if(a>0)
+System.out.println("Number is positive");
+else if(a==0)
+System.out.println("Number is zero");
+
+else
+System.out.println("Number is Negaitve");
+
+}
+}
