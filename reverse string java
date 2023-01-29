@@ -1,21 +1,27 @@
 import java.util.Scanner;
-class ReverseofaString
+ class Rev
 {
-	public static void main(String[] arg)
-	{
-	ReverseofaString rev=new ReverseofaString();
-	Scanner sc=new Scanner(System.in);
-	System.out.print("Enter a string : ");
-	String  str=sc.nextLine();	
-	System.out.println("Reverse of a String  is : "+rev.reverse(str));
-	}
-static String reverse(String s)
-	{
-	String rev="";
-	for(int j=s.length();j>0;--j)
-	{
-	rev=rev+(s.charAt(j-1)); 
-	}
-	return rev;
-	}
+    public static void main(String args[])
+    {
+        
+        Scanner obj=new Scanner(System.in);
+        System.out.print("Enter the string : ");
+        String st = obj.nextLine();
+       revfunc(st);
+    }
+     static void revfunc(String ar)
+    {
+        String re="";
+        for(int i=ar.length();i>0; --i)
+        {
+            re=re+(ar.charAt(i-1));
+        }
+        System.out.println("Reverse string : ");
+
+        for(int i=0;i<ar.length(); ++i)
+        {
+            System.out.print(""+re.charAt(i));
+        }
+    }
+
 }
