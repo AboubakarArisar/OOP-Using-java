@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class add
+{
+    public static void main(String ab[])
+    {
+        Scanner ob=new Scanner(System.in);
+        System.out.print("Enter number 1 : ");
+        int n1=ob.nextInt();
+        System.out.print("Enter number 2 : ");
+        int n2=ob.nextInt();
+        System.out.println("Addition is : "+func(n1,n2));
+    }
+
+    static int func(int a, int b)
+    {
+        return a+b;
+    }
+    
+}
