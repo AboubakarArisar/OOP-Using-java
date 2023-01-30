@@ -1,6 +1,6 @@
 
 import java.util.Scanner;
-class Perimerter1
+class Proj
 {
 
     public static void main(String[] args)
@@ -8,12 +8,12 @@ class Perimerter1
         Scanner ob=new Scanner(System.in);
         System.out.print("Enter coordinate of x(for p1) : ");
         double x1=ob.nextDouble();
-        System.out.print("Enter coordinate of y(for p1)");
+        System.out.print("Enter coordinate of y(for p1) : ");
         double y1=ob.nextDouble();
 
         System.out.print("Enter coordinate of x(for p2) : ");
         double x2=ob.nextDouble();
-        System.out.print("Enter coordinate of y(for p2)");
+        System.out.print("Enter coordinate of y(for p2) : ");
         double y2=ob.nextDouble();
         double dis=Math.sqrt(Math.pow((x2-x1),2)+Math.pow((y2-y1),2));
         System.out.println("Distance of coordinates is : "+dis);
