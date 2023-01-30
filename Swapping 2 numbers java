@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Swap
+{
+    public static void main(String ab[])
+    {
+        Scanner ob=new Scanner(System.in);
+        System.out.print("Enter the value of a : ");
+        int a=ob.nextInt();
+        System.out.print("Enter the value of b : ");
+        int b=ob.nextInt();
+        System.out.println("---------Values Before swapping----------");
+        System.out.println("Value of a : "+a);
+        System.out.println("Value of b : "+b);
+        swapfunc(a,b);
+
+    }
+    static void swapfunc(int x, int y)
+    {
+        int d=x;
+        x=y;
+        y=d;
+        System.out.println("---------Values after Swapping----------");
+        System.out.println("Value of a : "+x);
+        System.out.println("Value of b : "+y);
+    }
+}
