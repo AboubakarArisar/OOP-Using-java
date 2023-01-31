@@ -1,0 +1,19 @@
+import java.util.Scanner;
+ class Proj
+{
+        public static void inp()
+    {
+        Scanner o = new Scanner(System.in);
+        System.out.print("x : ");
+        int x = o.nextInt();
+        System.out.print("y : ");
+        int y = o.nextInt();
+    }
+    public static void main(String args[])
+    {
+        System.out.println("Cordinate of P1\n");
+       
+        inp();
+    }
+
+}
