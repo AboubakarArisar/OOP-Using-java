@@ -1,0 +1,22 @@
+import java.util.Scanner;
+public class Dec
+{
+  public static void main(String args[])
+  {
+      Scanner in = new Scanner(System.in);
+      System.out.print("Enter value : ");
+      double value=in.nextDouble();
+      int Integer=(int)value;
+
+      double roundof=(value-Integer);
+      if(roundof>=0.5)
+      {
+          System.out.println("Roundof  of number is : "+(Integer+1));
+      }
+      else
+      {
+          System.out.println("Roundof of number is : "+Integer);
+      }
+  }
+
+}
