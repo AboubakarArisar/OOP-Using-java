@@ -1,0 +1,43 @@
+import java.util.Scanner;
+public class ab {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+        int n = sc.nextInt();
+        int temp = n;
+        int unit = n % 10;
+        n = n / 10;
+        int ten = n % 10;
+        n = n / 10;
+        int hun = n;
+        int d=1,b=1,c=1;
+        for (int i = 1; i <=unit; i++)
+        {
+            d=d*i;
+
+        }
+     
+        for(int i=1; i<=ten;i++)
+
+        {
+            b=b*i;
+
+        }
+     
+        for (int i = 1; i<=hun; i++)
+        {
+            c=c*i;
+
+        }
+        
+        if(d+b+c==temp)
+        {
+            System.out.println("Strong");
+        }
+        else
+        {
+            System.out.println("Not strong");
+        }
+        
+    }
+}
