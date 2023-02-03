@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Test {
+public class VowelsChecker {
     public static void main(String args[]) {
         int count = 0;
         System.out.println("Enter a sentence :");
