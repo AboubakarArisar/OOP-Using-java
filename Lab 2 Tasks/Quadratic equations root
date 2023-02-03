@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Task5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to the quadratic equation solver");
+        System.out.print("value of a : ");
+        double a = sc.nextDouble();
+        System.out.print("Value of b : ");
+        double b = sc.nextDouble();
+        System.out.print("Value of c : ");
+        double c = sc.nextDouble();
+        double x1,x2;//here x1 and x2 are for the roots of the quadratic equation
+        x1 = (-b + Math.sqrt(Math.pow(b,2) - 4 * a * c)) / 2 * a;
+        x2= (-b - Math.sqrt(Math.pow(b,2)- 4 * a * c))/ 2 * a;
+        System.out.println("Value of x = " + x1);
+        System.out.println("Value of x = " + x2);
+
+    }
+}
