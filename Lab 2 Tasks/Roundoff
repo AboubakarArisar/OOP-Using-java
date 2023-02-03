@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Roundoff
+{
+    public static void main(String args[])
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter value 1 : ");
+        double value1 = in.nextDouble();
+        System.out.print("Enter value 2 : ");
+        double value2 = in.nextDouble();
+        double value=value1/value2;
+        System.out.println("Division is : "+value);
+        int Integer=(int)value;
+
+        double roundof=(value-Integer);
+        if(roundof>=0.5)
+        {
+            System.out.println("Roundof  of number is : "+(Integer+1));
+        }
+        else
+        {
+            System.out.println("Roundof of number is : "+Integer);
+        }
+    }
+
+}
