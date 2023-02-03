@@ -1,0 +1,9 @@
+public class Replace
+{
+    public static void main(String[] args)
+    {
+        String initial="The quick brown fox jumps over the lazy dog.";
+                System.out.println(initial.replace("fox", "cat"));
+
+    }
+}
