@@ -1,0 +1,58 @@
+import java.util.Scanner;
+public class StrongNum {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+        int n = sc.nextInt();
+        int temp = n;
+        int actualNumber=n;
+        int count =0;
+        while(n!=0)
+        {
+
+            n=n/10;
+
+            count++;
+        }
+        int intArray[];
+        intArray = new int[count];
+
+
+        for(int i=0; i<count; i++)
+        {
+
+
+            intArray[i]=temp%10;
+            temp=temp/10;
+        }
+
+            for(int i=0; i<count; i++) {
+                int facNum = intArray[i];
+                intArray[i] = 1;
+                for (int j = 1; j <= facNum; j++) {
+
+                    intArray[i] = intArray[i] * j;
+                }
+
+
+            }
+        int sum=0;
+        for(int i=0; i<count; i++)
+        {
+            sum=sum+intArray[i];
+
+        }
+        
+        if(sum==actualNumber)
+        {
+            System.out.println("Number is strong");
+        }
+        else
+        {
+            System.out.println("Number is not Strong");
+        }
+
+
+
+    }
+}
