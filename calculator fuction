@@ -1,0 +1,67 @@
+import java.util.Scanner;
+public class Cal
+{
+    public static void func(int range,int opt)
+    {
+        Scanner obj=new Scanner(System.in);
+        double arr[]=new double[range];
+        double calc=1;
+        for(int i=0;i<range;i++)
+        {
+            if(opt==1)
+            {
+                System.out.println("Enter the number  "+(i+1));
+                arr[i]=obj.nextDouble();
+                calc+=arr[i];
+            }
+            else if(opt==2)
+            {
+                System.out.println("Enter the number  "+(i+1));
+                arr[i]=obj.nextInt();
+                calc-=arr[i];
+            }
+            else if(opt==3){
+                System.out.println("Enter the number  "+(i+1));
+                arr[i]=obj.nextInt();
+                calc*=arr[i];}
+
+        }
+        System.out.println("calculation "+calc);
+    }
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Which opearation do you want to do?");
+        System.out.println("1. Add");
+        System.out.println("2. Subtract");
+        System.out.println("3. Multiply");
+        System.out.println("4. Divide");
+        System.out.println("5. Square root");
+        System.out.println("6. Square");
+        System.out.println("Enter option : ");
+        int option = sc.nextInt();
+        if(option==5 || option==6)
+        {
+            System.out.println("Enter the number : ");
+            double num = sc.nextDouble();
+            switch(option){
+                case 5:
+                    System.out.println("The square root of " + num + " is " + Math.sqrt(num));
+                    break;
+                case 6:
+                    System.out.println("The square of " + num + " is " + num * num);
+                    break;
+                default:
+
+            }
+        }
+        else
+        {
+            System.out.println("How many numbers do you want to enter?");
+            int num = sc.nextInt();
+            func(num,option);
+
+        }
+
+    }
+}
