@@ -1,0 +1,94 @@
+import java.util.Scanner;
+public class Calculator
+{
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        String option = "Y";
+        while (option.charAt(0) == 'Y' || option.charAt(0) == 'y') {
+
+            System.out.println("/t/tCalculator");
+            System.out.println("1.Addition  ");
+            System.out.println("2.Subtraction");
+            System.out.println("3.Multiplication");
+            System.out.println("4.Division");
+            System.out.println("5.Square");
+            System.out.println("6.Square root");
+            System.out.println("7.Exit");
+            System.out.print("Enter your choice: ");
+            int choice = sc.nextInt();
+            if (choice == 5 || choice == 6) {
+                System.out.printf("Enter the number : ");
+                double number = sc.nextDouble();
+                if (choice == 5)
+                    System.out.println("The Square of the number is : " + Math.pow(number, 2));
+                else if (choice == 6)
+                    System.out.println("The Square of the number is : " + Math.sqrt(number));
+            } else if (choice == 1 || choice == 2 || choice == 3 || choice == 4) {
+                fun(choice);
+            }
+            if (choice == 4) {
+                System.out.println("Enter the number 1 : ");
+                double number1 = sc.nextDouble();
+                System.out.println("Enter the number 2 : ");
+                double number2 = sc.nextDouble();
+                System.out.println("The Division is : " + (number1 / number2));
+            }
+
+
+            System.out.println("Do you want to use calculator again?(Y/N)");
+            option = sc.next();
+        }
+        System.out.println("Thank you for using calculator");
+    }
+        public static void fun(int ch)
+        {
+            Scanner sc = new Scanner(System.in);
+          if(ch ==1)
+          {
+              System.out.println("How many numbers addition do you want?");
+              int n = sc.nextInt();
+              double sum=0;
+              double num[]=new double[n];
+              for(int i=0;i<n;i++)
+              {
+                  System.out.println("Enter the number "+(i+1)+" : ");
+                  num[i]=sc.nextDouble();
+                  sum+=num[i];
+              }
+              System.out.println("Sum of the numbers : "+sum);
+          }
+          else if(ch ==2)
+          {
+
+              System.out.println("How many numbers addition do you want?");
+              int n = sc.nextInt();
+              double sum=0;
+              double num[]=new double[n];
+              for(int i=0;i<n;i++)
+              {
+                  System.out.println("Enter the number "+(i+1)+" : ");
+                  num[i]=sc.nextDouble();
+                  if(i==0)
+                      sum=num[i];//to store first value in sum to subtract
+                  else
+                  sum-=num[i];
+              }
+              System.out.println("Subtraction of the numbers : "+sum);
+          }
+          else if(ch ==3)
+          {
+
+              System.out.println("How many numbers addition do you want?");
+              int n = sc.nextInt();
+              double sum=1;
+              double num[]=new double[n];
+              for(int i=0;i<n;i++)
+              {
+                  System.out.println("Enter the number "+(i+1)+" : ");
+                  num[i]=sc.nextDouble();
+                  sum*=num[i];
+              }
+              System.out.println("Multiplication of the numbers : "+sum);
+          }
+        }
+}
