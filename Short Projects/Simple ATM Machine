@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class ATM {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        double initialBalance = 5000;
+        int choice = 0;
+        int  opt = 1;
+
+        while (opt == 1)
+        {
+            System.out.println("--------------");
+            System.out.println("Welcome to ATM");
+            System.out.println("---------------");
+            System.out.println("1. Check Balance");
+            System.out.println("2. Withdraw");
+            System.out.println("3. Exit");
+            System.out.println("--------------");
+            System.out.print("Enter your choice: ");
+             choice = sc.nextInt();
+            switch (choice) {
+                case 1: {
+                    System.out.println("Your Current Balance is : " + initialBalance);
+                    break;
+                }
+                case 2: {
+                    System.out.print("How many Rupees you want to withdraw (amount should be multiple of 500) : ");
+                    double withdrawAmount = sc.nextDouble();
+                    if (withdrawAmount % 500 != 0) {
+                        System.out.println("Please enter amount in the multiples of 500");
+                        break;
+                    } else if (withdrawAmount > initialBalance) {
+                        System.out.println("Insufficient funds");
+                        break;
+                    }
+                        initialBalance = initialBalance - withdrawAmount;
+                        System.out.println("Your Remaining funds are : " + initialBalance);
+                        break;
+
+
+                }
+                case 3:
+                    System.exit(0);
+
+                default:
+                    System.out.println("Invaild input");
+            }
+
+            System.out.println("Thank you for using ATM ");
+            System.out.println("--------------");
+            System.out.print("Do you want to do another transaction (1 for yes 0 for no) : ");
+            opt = sc.nextInt();
+        }
+
+    }
+}
