@@ -1,0 +1,22 @@
+import java.util.Random;
+public class first
+{
+    public static void main(String[] args)
+    {
+        Random rand = new Random();
+        int set1[]=new int [3];
+        int set2, set3;
+        for(int i = 0; i < 3; i++)
+        {
+            set1[i]=rand.nextInt(7);
+        }
+        set2 = rand.nextInt(830);
+        set3 = rand.nextInt(9999);
+        System.out.print("Random number : ");
+        for(int i = 0; i < 3; i++)
+        {
+            System.out.print(set1[i]);
+        }
+        System.out.print("-" + set2 + "-" + set3);
+    }
+}
