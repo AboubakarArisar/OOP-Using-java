@@ -1,0 +1,24 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Question3
+{
+    public static void main(String[] args)
+    {
+        System.out.println("Heron's Formula for Finding Triangle's Area");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter length of side a: ");
+        int sideA = sc.nextInt();
+        System.out.print("Enter the length of side b: ");
+        int sideB= sc.nextInt();
+        System.out.print("Enter the length of side c: ");
+        int sideC = sc.nextInt();
+
+        double perimeter = (sideA + sideB + sideC) / 2;
+        double area = Math.sqrt(perimeter * ((perimeter - sideA) * (perimeter - sideB) * (perimeter - sideC)));
+
+        System.out.println("The area of the triangle is " + area);
+
+
+
+    }
+}
