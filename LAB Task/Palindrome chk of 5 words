@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class Question4
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String word[]= new String[5];
+        String result[] = new String[5];
+        for(int i=0; i<5; i++)
+        {
+
+            System.out.print("Enter word "+(i+1) +": ");
+            word[i] = sc.nextLine();
+
+            result[i] = palindrome(word[i]);
+        }
+        System.out.println("INPUT");
+        System.out.println("================================");
+        for(int i=0; i<5; i++)
+        {
+            System.out.println("Word "+(i+1)+" : "+word[i]);
+        }
+        System.out.println();
+        System.out.println("OUTPUT ");
+        System.out.println("================================");
+        System.out.println("Word \t\t\t\tPalindrome");
+        System.out.println("================================");
+        for(int i=0; i<5; i++)
+        {
+            System.out.println(word[i]+"\t\t\t\t\t"+result[i]);
+        }
+
+    }
+    public static String palindrome(String str)
+    {
+        str = str.toLowerCase();
+
+        int x = (str.length()-1);
+        boolean result = true;
+        for(int i = 0; i < str.length(); i++)
+        {
+            if(str.charAt(i) != str.charAt(x))
+            {
+                result = false;
+                break;
+            }
+            x--;
+        }
+        if(result==true)
+        {
+            return("Yes");
+        }
+        else
+        {
+            return("No");
+        }
+    }
+}
