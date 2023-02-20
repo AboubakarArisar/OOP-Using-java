@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Question2b
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int x1 , y1, x2 , y2;
+        System.out.print("Value of x1 : ");
+        x1 = sc.nextInt();
+        System.out.print("Value of y1 :  ");
+        y1 = sc.nextInt();
+        System.out.print("value of x2 : ");
+        x2 = sc.nextInt();
+        System.out.print("Value of y2 : ");
+        y2 = sc.nextInt();
+        double distance = (Math.sqrt(Math.pow((x2- x1),2) + (Math.pow((y2- y1),2))));
+        System.out.println("The Euclidean distance between point x and y is : " + distance);
+
+    }
+}
