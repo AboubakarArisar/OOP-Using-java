@@ -1,0 +1,26 @@
+import java.util.Scanner;
+import java.util.Random;
+public class Question2a
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+
+        int radius = rand.nextInt(10);
+        if(radius == 0)                   //if radius is 0 then area wont be calculated that's why i have used increment
+            radius++;
+        System.out.println(" Radius of cylinder : "+radius);
+
+        int height = rand.nextInt(10);
+        if(height == 0)                    //if height is 0 then area wont be calculated that's why i have used increment
+            height++;
+        System.out.println(" Height of cylinder : "+height);
+
+        double volume = (Math.PI)*(Math.pow(radius, 2) * height);
+        System.out.println(" Volume of cylinder : "+volume);
+
+        double area = (2 * (Math.PI) * radius * height) + (2 * (Math.PI) * Math.pow(radius,2));
+        System.out.println(" Area of cylinder : "+area);
+    }
+}
