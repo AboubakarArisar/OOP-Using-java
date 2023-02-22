@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Steric
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        String str = "";
+        System.out.print("Enter the string : ");
+        str = sc.nextLine();
+        System.out.println();
+        System.out.println("================================");
+        System.out.println("=======Original String==========");
+        System.out.println("================================");
+        System.out.println(str);
+        System.out.println();
+
+        System.out.println("================================");
+        System.out.println("========Steric String===========");
+        System.out.println("================================");
+        char c[] = new char[str.length()];
+        for(int i = 0; i < str.length(); i++)
+        {
+            c[i] = '*';
+        }
+        String steric = "";
+        steric = new String(c);
+        System.out.println(steric);
+    }
+}
