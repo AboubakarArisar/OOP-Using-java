@@ -1,0 +1,40 @@
+class Box
+{
+    double width;
+    double height;
+    double depth;
+
+    void printData()
+    {
+
+        System.out.println("Height : " +height);
+        System.out.println("Width : " +width);
+        System.out.println("Depth : " +depth);
+    }
+    double getvolume()
+    {
+        return height*width*depth;
+    }
+}
+public class Main
+{
+    public static void main(String[] args)
+    {
+        //Object Creation
+        Box b1 = new Box () ;
+
+        b1 . height = 10.0 ;
+        b1 . width = 10.0 ;
+        b1 . depth = 10.0 ;
+
+
+        System.out.println();
+        System.out.println("=============================");
+        System.out.println(" =========First Class=======");
+        System.out.println("=============================");
+        System.out.println();
+        b1.printData();
+        System.out.println("Volume of box is : "+b1.getvolume());
+
+    }
+}
