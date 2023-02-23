@@ -1,0 +1,115 @@
+import java.util.Scanner;
+import java.util.Random;
+public class cricket
+{
+    public static void main(String[] args) {
+        System.out.println("======================================");
+        System.out.println("==============Cricket Game============");
+        System.out.println("======================================");
+        Scanner sc = new Scanner(System.in);
+        String cap1, cap2;
+        System.out.print("Captain Name of Team A : ");
+        cap1 = sc.nextLine();
+        System.out.print("Captain Name of Team B : ");
+        cap2 = sc.nextLine();
+        int overs;
+        System.out.print("How many overs game you want to play : ");
+        overs = sc.nextInt();
+
+        Random rand = new Random();
+        System.out.println("Toss Time");
+        int choice, Toss;
+        System.out.print(cap1 + "  heads or Tails (0 for heads and 1 for tails) --> ");
+        choice = sc.nextInt();
+        Toss = rand.nextInt(2);
+        if (choice == Toss) {
+            System.out.println(cap1 + " You have won the Toss and you are batting!");
+
+            System.out.println(cap1 + "You have " + overs + " overs to Score runs ");
+            System.out.println("Best of luck!");
+            int batting, score1 = 0, score2 = 0;
+            for (int i = 1; i <= overs; i++) {
+                for (int j = 1; j <= 6; j++) {
+                    batting = rand.nextInt(7);
+                    System.out.println(cap1 + " Bowl " + i + "  : " + batting);
+                    score1 += batting;
+                }
+
+                System.out.println("Over number " + i + " Complete and Score is : " + score1);
+
+            }
+            System.out.println(cap1 + " At the end of innings you have Scored " + score1 + " runs");
+            int ready;
+            System.out.println("It is time for defending Target " + cap1);
+            System.out.println("Are you ready " + cap2 + " for chasing !!");
+            System.out.print("Enter 1 if you are ready -->");
+            ready = sc.nextInt();
+            if (ready == 1) {
+
+                for (int i = 1; i <= overs; i++) {
+                    for (int j = 1; j <= 6; j++) {
+                        batting = rand.nextInt(7);
+                        System.out.println(cap2 + " Bowl " + i + "  : " + batting);
+                        score2 += batting;
+                    }
+                    System.out.println("Over number " + i + " Complete and Score is " + score2);
+                    if (score2 > score1)
+                        break;
+                }
+                if (score2 > score1)
+                    System.out.println(cap2 + " Congratulations you have won and scored" + score2 + " runs");
+                else if (score2 < score1)
+                    System.out.println(cap2 + " Hard luck! you have lost the game by " + (score1 - score2) + " runs");
+                else
+                    System.out.println("Match Tie");
+
+            }
+
+
+        } else {
+            System.out.println(cap1 + " You have lost the Toss and you are bowling!");
+
+
+            System.out.println(cap2 + "You have " + overs + " overs to Score runs ");
+            System.out.println("Best of luck!");
+            int batting, score1 = 0, score2 = 0;
+            for (int i = 1; i <= overs; i++) {
+                for (int j = 1; j <= 6; j++) {
+                    batting = rand.nextInt(7);
+                    System.out.println(cap2 + " Bowl " + i + "  : " + batting);
+                    score1 += batting;
+                }
+
+                System.out.println("Over number " + i + " Complete and Score is : " + score1);
+
+            }
+            System.out.println(cap2 + " At the end of innings you have Scored " + score1 + " runs");
+            int ready;
+            System.out.println("It is time for defending Target " + cap2);
+            System.out.println("Are you ready " + cap1 + " for chasing !!");
+            System.out.print("Enter 1 if you are ready -->");
+            ready = sc.nextInt();
+            if (ready == 1) {
+
+                for (int i = 1; i <= overs; i++) {
+                    for (int j = 1; j <= 6; j++) {
+                        batting = rand.nextInt(7);
+                        System.out.println(cap1 + " Bowl " + i + "  : " + batting);
+                        score2 += batting;
+                    }
+                    System.out.println("Over number " + i + " Complete and Score is " + score2);
+                    if (score2 > score1)
+                        break;
+                }
+                if (score2 > score1)
+                    System.out.println(cap1 + " Congratulations you have won and scored" + score2 + " runs");
+                else if (score2 < score1)
+                    System.out.println(cap1 + " Hard luck! you have lost the game by " + (score1 - score2) + " runs");
+                else
+                    System.out.println("Match Tie");
+
+            }
+
+        }
+    }
+}
