@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Aboubakar
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        outer :
+        switch (n)
+        {
+            case 1:
+                System.out.print("Hello first number ");
+                break;
+
+            case 2:
+                System.out.print("Hello second number ");
+             inner:
+                switch(n%2)
+             {
+                 case 0:
+                     System.out.print("Hello even number ");
+                     break outer;
+                 case 1:
+                     System.out.print("Hello odd number ");
+                     break outer;
+             }
+             System.out.print("After switching");
+
+                break;
+        }
+    }
+}
