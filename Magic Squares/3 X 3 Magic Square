@@ -1,0 +1,62 @@
+import java.util.Scanner;
+public class MagicSquare
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int square[][]=new int[3][3];
+        for (int i = 0; i < 3; i++)
+        {
+            for(int j = 0; j < 3; j++)
+            {
+                System.out.print("Enter the value of row "+(i+1)+" and column "+(j+1)+" : ");
+                square[i][j]=sc.nextInt();
+
+            }
+            System.out.println();
+        }
+        boolean result = eq(square);
+        if (result==true)
+            System.out.println("Magic Square");
+
+        else
+            System.out.println("Not Magic Square");
+
+    }
+    public static boolean eq(int array[][])
+    {
+        int rows[]=new int [3];
+        int column[] = new int[3];
+        int diagonal[]=new int[2];
+        for(int i=0; i<3; i++)
+        {
+            for(int j=0; j<3; j++)
+            {
+                rows[i]+=array[i][j];
+                column[i]+=array[j][i];
+                if(i==0)
+                {
+                    diagonal[i]+=array[j][j];
+                }
+                else if(i==1)
+                {
+                    int k=2;
+                    diagonal[i]+=array[j][k];
+                    k--;
+                }
+            }
+            System.out.println();
+        }
+
+
+        if(rows[0]==rows[1] && rows[1]==rows[2])
+        {
+            if(column[0]==column[1] && column[1]==column[2]&&diagonal[0]==diagonal[1])
+                if(diagonal[0]==rows[0]&&diagonal[1]==column[0])
+
+            return true;
+
+        }
+        return false;
+    }
+}
