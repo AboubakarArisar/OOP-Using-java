@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Function
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        double array[]=new double[5];
+        for(int i=0; i<array.length; i++)
+        {
+            System.out.print("Enter value "+(i+1)+" : ");
+            array[i]=sc.nextDouble();
+        }
+        sum(array);
+    }
+    public static void sum(double[] array)
+    {
+        double sum = 0;
+        for(int i=0; i<array.length; i++)
+        {
+            sum += array[i];
+        }
+        System.out.println("Sum of the values in the array is : " + sum);
+    }
+}
