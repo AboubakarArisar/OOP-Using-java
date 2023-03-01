@@ -1,0 +1,31 @@
+import java.util.Scanner;
+class Rectangle
+{
+   double height, width, area;
+   Rectangle(double h, double w)
+   {
+       this.height = h;
+       this.width = w;
+       this.area = result(height,width);
+   }
+   double result(double h, double w)
+    {
+        area = h*w;
+        return area;
+
+    }
+    void print()
+    {
+        System.out.println("Height: " + height + "\nWidth: " + width+ "\nArea: " + area);
+    }
+
+}
+public class exercise
+{
+    public static void main(String[] args)
+    {
+        Rectangle r = new Rectangle(3.5,6.67);
+        r.print();
+
+    }
+}
