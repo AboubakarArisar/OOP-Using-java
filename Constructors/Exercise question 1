@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Person
+{
+    String name;
+    int age;
+    Person(String name, int age)
+    {
+        this.name = name;
+        this.age = age;
+    }
+    void getData()
+    {
+        System.out.println("Name : "+name+ "\nAge : "+age);
+    }
+
+}
+public class exercise
+{
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        Person p1 = new Person("Aboubakar", 19);
+        p1.getData();
+
+    }
+}
