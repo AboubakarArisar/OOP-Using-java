@@ -1,0 +1,73 @@
+import java.util.Scanner;
+class Box
+{
+    Box()
+    {
+        height=depth=width = 0.0;
+    }
+    Box(double val)
+    {
+        height=depth=width = val;
+    }
+    Box(double height, double depth, double width)
+    {
+        this.height = height;
+        this.depth = depth;
+        this.width = width;
+    }
+    private double height;
+    private double depth;
+    private double width;
+
+    void setHeight(double height)
+    {
+        this.height = height;
+    }
+
+    void setDepth(double depth)
+    {
+        this.depth = depth;
+    }
+
+    void setWidth(double width)
+    {
+        this.width = width;
+    }
+    void SetData(double height, double depth, double width)
+    {
+        this.height = height;
+        this.depth = depth;
+        this.width = width;
+    }
+
+    double getHeight()
+    {
+        return height;
+    }
+
+    double getDepth()
+    {
+        return depth;
+    }
+    double getWidth()
+    {
+        return width;
+    }
+    void printData()
+    {
+        System.out.println("Height : "+height+ "\ndepth : "+depth+ "\nwidth : "+width);
+    }
+}
+public class Cnstrct
+{
+    public static void main(String args[])
+    {
+        Box b1  = new Box(4.0);
+        b1.printData();
+        b1 = new Box();
+        b1.printData();
+        b1 = new Box(5.0,3.5,2.5);
+        b1.printData();
+
+    }
+}
