@@ -1,0 +1,87 @@
+import java.util.Scanner;
+class Employee
+{
+    String firstName,lastName;
+    double MonthlySalary;
+    void setfirstname(String firstName)
+    {
+        this.firstName = firstName;
+    }
+    void setlastname(String lastName)
+    {
+        this.lastName = lastName;
+    }
+    void setMonthlySalary(double MonthlySalary)
+    {
+        this.MonthlySalary = MonthlySalary;
+    }
+    Employee()
+    {
+        this.MonthlySalary = 0.0;
+    }
+    Employee(String fname, String lname, Double sal)
+    {
+        this();
+        this.firstName = fname;
+        this.lastName = lname;
+        if(sal>0)
+        this.MonthlySalary = sal;    
+    }
+    String getfname()
+    {
+        return this.firstName;
+    }
+    String getlname()
+    {
+        return this.lastName;
+    }
+    double getsal()
+    {
+        return this.MonthlySalary;
+    }
+    void display()
+    {
+        this.firstName= getfname();
+        this.lastName = getlname();
+        this.MonthlySalary = getsal();
+        System.out.println("Name\t\t\tSalary");
+        System.out.println(firstName+" "+lastName+"\t"+MonthlySalary);
+    }
+    double updatesal()
+    {
+        this.MonthlySalary += MonthlySalary*0.1;
+        return MonthlySalary;
+    }
+    void display2()
+    {
+     this.firstName= getfname();
+        this.lastName = getlname();
+        this.MonthlySalary = updatesal();
+        System.out.println("Name\t\t\t\tSalary\n");
+        System.out.println(firstName+lastName+"\t"+MonthlySalary);
+       
+    }
+
+
+
+}
+
+    public class Task
+    {
+        public static void main(String[] args)
+        {
+            Employee emp1 = new Employee("Aboubakar","Arisar",-90d);
+            emp1.display();
+            System.out.println();
+            Employee emp2 = new Employee("Ihsan","Narejo",80d);
+            emp2.display();
+            System.out.println("========Updated Salaries=======");
+            emp1.display2();
+            System.out.println();
+            emp2.display2();
+
+            
+        }
+
+    }
+
