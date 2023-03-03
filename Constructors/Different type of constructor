@@ -1,0 +1,44 @@
+import java.util.Scanner;
+class Student
+{
+    String name;
+    String CMS;
+    int semester;
+    int fall;
+    Student(int fall)
+    {
+        this.fall = fall;
+    }
+    Student(String name, String CMS, int semester, int fall)
+    {
+        this(fall);//calling constructor in constructor
+        this.name = name;
+        this.CMS = CMS;
+        this.semester = semester;
+
+    }
+    Student(Student std)//copy constructor
+    {
+        this.name = std.name;
+        this.CMS = std.CMS;
+        this.semester = std.semester;
+        this.fall = std.fall;
+    }
+    void print()
+    {
+        System.out.println("Name"+" \tCMS"+"\t\tSemester"+"\tFall");
+        System.out.println(name+"  "+CMS+"\t"+semester+"\t"+fall);
+    }
+}
+public class Task
+{
+    public static void main(String[] args)
+    {
+        Student student = new Student("Aboubakar","023-22-0107",2,2022);
+        Student student2 = new Student(student);
+        student.print();
+        System.out.println();
+        System.out.println("Student 2");
+        student2.print();
+    }
+}
