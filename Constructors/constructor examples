@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class Company
+{
+   String name;
+    int numEmployee;
+    int numDept;
+    Company()
+    {
+        name = "Aboubakar";
+    }
+    Company(int numEmployee, int numDept)
+    {
+        this();
+        this.numEmployee = numEmployee;
+        this.numDept = numDept;
+    }
+    void print()
+    {
+        System.out.println("Name : "+name+"\nNo of Employees : "+numEmployee+"\nNo of Depts : "+numDept);
+    }
+}
+public class Task2
+{
+    public static void main(String[] args)
+    {
+        Company company = new Company(23,2);
+        company.print();
+    }
+}
