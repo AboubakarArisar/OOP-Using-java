@@ -1,0 +1,22 @@
+class Swapping
+{
+    void Swap_pass_by_Value(int a, int b)
+    {
+        int temp = a;
+        b = a;
+        a = temp;
+    }
+}
+public class Output
+{
+    public static void main(String ard[])
+    {
+        Swapping swap = new Swapping();
+        int a =34, b=17;
+        System.out.print("Before Swapping | ");
+        System.out.println("a : "+a+" b : "+b);
+        swap.Swap_pass_by_Value(a,b);
+        System.out.print("After Swapping | ");
+        System.out.println("a : "+a+" b : "+b);
+    }
+}
