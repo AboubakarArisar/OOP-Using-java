@@ -8,7 +8,7 @@ class MyMath
         System.out.print("How many number you want to add  : ");
         int range = sc.nextInt();
         for(int i=1; i<=range; i++)
-        {
+        { 
             System.out.print("Enter the number "+(i)+" : ");
             num=sc.nextInt();
             sum+=num;
