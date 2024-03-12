@@ -1,5 +1,5 @@
 import java.util.Scanner;
-class Employee
+class Employee 
 {
    private String firstName,lastName;
     private double MonthlySalary;
